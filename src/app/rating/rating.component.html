@@ -1,0 +1,105 @@
+<div class="backdrop" (click)="onClose()"></div>
+
+<div class="rating-box">
+
+  <!-- Close button-->
+  <div class="rating-box-actions">
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="onClose()"></button>
+  </div>
+
+  <div class="sideBar">
+    <img src="{{bookCover}}" class = "image" alt="AltImage">
+
+    <p class="info">{{ bookName }}</p>
+    <p class="info">ID: {{bookId}}</p>
+    <p class="info">Author: {{bookAuthor}}</p>
+  </div>
+
+  <div class = "title">
+    <h3>My Review for {{bookName}}</h3>
+  </div>
+
+
+  <!-- post comment  -->
+  <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+    <!-- 5 stars  -->
+    <div class="rate">
+      <h4>Overall Rating</h4>
+      <input type="radio" id="star5" ngModel name="rating" value="5" />
+      <label for="star5" title="text">5 stars</label>
+      <input type="radio" id="star4" ngModel name="rating" value="4" />
+      <label for="star4" title="text">4 stars</label>
+      <input type="radio" id="star3" ngModel name="rating" value="3" />
+      <label for="star3" title="text">3 stars</label>
+      <input type="radio" id="star2" ngModel name="rating" value="2" />
+      <label for="star2" title="text">2 stars</label>
+      <input type="radio" id="star1" ngModel name="rating" value="1" />
+      <label for="star1" title="text">1 star</label>
+    </div>
+
+    <div class="Review_TitleBox">
+      <p>Review Title:</p>
+      <input
+        type="text"
+        ngModel
+        name="title"
+        required
+        size="51"
+        maxlength="30" />
+    </div>
+
+    <div class="comment-box">
+      <p>Review</p>
+      <textarea
+        id="content"
+        required
+        ngModel
+        name="content"
+        cols="50"
+        rows="8"
+        maxlength="400"
+        placeholder="Enter your comments..."> Enter your comments...</textarea>
+      <input type="checkbox" id="anonymous" name="anonymous" value="checkbox">
+      <label for="anonymous" > Make anonymous </label><br>
+    </div>
+
+
+    <div class="submitButton">
+      <!-- Submit action  -->
+      <div class="d-grid gap-2">
+
+        <button
+          class="btn btn-success"
+          type="submit"
+          [disabled]="!allowSubmit"
+          (click)="onCreateComment()">Submit </button>
+      </div>
+      <p *ngIf="commentAdded" >{{commentCreationStatus}}</p>
+
+    </div>
+
+  </form>
+
+  <!-- fetch and clear
+  <div class="row">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <button class="btn btn-primary" >
+        Fetch Posts
+      </button>
+      |
+      <button
+        class="btn btn-danger"
+        [disabled]="loadedPosts.length < 1"
+        (click)="onClearPosts()"
+      >
+        Clear Posts
+      </button>
+    </div>
+  </div>
+
+  -->
+</div>
