@@ -1,0 +1,178 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.75);
+  z-index: 1;
+
+}
+
+.rating-box {
+  height: fit-content;
+  position: fixed;
+  top: 5vh;
+  left: 25vw;
+  /*width: 50vw;*/
+  width: 710px;
+  padding: 16px 16px 16px 0;
+  z-index: 2;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.26);
+  overflow-x: hidden;
+  justify-items: left;
+
+
+}
+
+/******************ClASS SELECTORS*********************/
+.sideBar{
+  height: 550px;
+  width: 210px;
+  position: fixed;
+
+  overflow-x: hidden;
+  background-color: #f6f6f6;
+
+  z-index: 2;
+  top: 5vh;
+  padding: 15px 17px 15px 17px;
+}
+
+.image {
+
+  width: 175px;
+
+  z-index:2;
+
+
+}
+.title {
+  float: left;
+  height: fit-content;
+  width:400px;
+  padding: 0 10px;
+  margin-left: 220px;
+  z-index:2;
+
+}
+.Review_TitleBox{
+  float: left;
+  height: auto;
+  width: 400px;
+  padding: 0 10px;
+  margin: 10px 0 20px 220px;
+  z-index:2;
+
+}
+
+.comment-box{
+  float: left;
+  height: auto;
+  width: 400px;
+  padding: 0 10px 45px;
+  margin-left: 220px;
+  z-index:2;
+
+}
+
+.rating-box-actions {
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.submitButton {
+
+  height: 50px;
+  width: 400px;
+  padding: 0 10px;
+  margin-left: 240px;
+  position: absolute;
+  bottom: 0 ;
+
+
+  justify-content: center;
+  z-index:2;
+
+}
+
+
+/******************5 Starts*********************/
+*{
+  margin: 0;
+  padding: 0;
+}
+.rate {
+  position: relative;
+  float: left;
+  height: 80px;
+  padding: 0 10px;
+  z-index: 2;
+  margin-left: 220px;
+  margin-top: 10px;
+}
+.rate:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+
+.rate:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:30px;
+  color:#ccc;
+}
+.rate:not(:checked) > label:before {
+  content: '★ ';
+}
+.rate > input:checked ~ label {
+  color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+
+
+
+
+hr {
+
+  width: 10%;
+  height: 0px;
+  border-style: dotted none none;
+  border-color: #f6f6f6;
+  border-width: 5px;
+
+}
+/* FONTS*/
+p {
+  color: #393e46;
+  font-style: normal;
+  font-family: "Noto Sans Old Permic";
+  font-size: 15px;
+}
+h3 {
+  color: #1e212d;
+  font-style: normal;
+  font-family: "Noto Sans Old Permic";
+}
+h4 {
+  color: #393e46;
+  font-style: oblique;
+  font-family: "Noto Sans Old Permic";
+}
+

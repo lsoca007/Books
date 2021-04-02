@@ -1,0 +1,83 @@
+
+/* HeroesComponent's private CSS styles */
+.books {
+    margin: 2em 0 2em 20em;
+    list-style-type: none;
+    padding: 0;
+    width: 55em;
+  }
+  .books li {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #EEE;
+    margin: .9em;
+    padding: .3em 0;
+    height: 1.6em;
+    border-radius: 4px;
+  }
+  .books li:hover {
+    color: #648f5f;
+    background-color: #DDD;
+    left: .1em;
+  }
+  .books li.selected {
+    background-color: #CFD8DC;
+    color: white;
+  }
+  .books li.selected:hover {
+    background-color: #BBD8DC;
+    color: white;
+  }
+  .books .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color:#325338;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+  }
+
+  
+/* Place the navbar at the bottom of the page, and make it stick */
+.navbar {
+    background-color: rgb(79, 121, 86);
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .navbar a:hover {
+    background-color: #ddd;
+    color: rgb(65, 97, 67);
+  }
+  
+  /* Add a color to the active/current link */
+  .navbar a.active {
+    background-color: #6a8a6b;
+    color: white;
+  }
+  /* Dropdown Button */
+
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
